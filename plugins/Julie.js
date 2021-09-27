@@ -4,7 +4,7 @@ const fs = require('fs');
 
 if (Config.WORKTYPE == 'private') {
 
-  Julie.addCommand({ pattern: "help ?(.*)", fromMe: true, dontAddCommandList: true },
+  Julie.addCommand({ pattern: "d ?(.*)", fromMe: true, dontAddCommandList: true },
   async (message, match) => {
     let CMD_HELP = "";
     Julie.commands.map(async (command) => {
@@ -27,11 +27,11 @@ if (Config.WORKTYPE == 'private') {
         } else {
           HANDLER = ".";
         }
-        CMD_HELP += '*🧞‍♂️' + 
+        CMD_HELP += '*⚡' + 
           (match.length >= 3 ? HANDLER + match[2] : command.pattern) + '*\n' +
           (command.desc === ""
             ? "\n"
-            : " ".repeat(8 - match[2].length) + " \n📓 ");
+            : " ".repeat(8 - match[2].length) + " \n🍁 ");
         if (command.desc !== "")
           CMD_HELP +=  command.desc + (command.usage === "" ? "\n\n" : "\n\n");
       }
@@ -40,7 +40,7 @@ if (Config.WORKTYPE == 'private') {
   }
 );
 
-Julie.addCommand({ pattern: "list ?(.*)", fromMe: false, dontAddCommandList: true },
+Julie.addCommand({ pattern: "d ?(.*)", fromMe: false, dontAddCommandList: true },
   async (message, match) => {
     let CMD_HELP = "";
     Julie.commands.map(async (command) => {
@@ -63,11 +63,11 @@ Julie.addCommand({ pattern: "list ?(.*)", fromMe: false, dontAddCommandList: tru
         } else {
           HANDLER = ".";
         }
-        CMD_HELP += '*🧞‍♂️' + 
+        CMD_HELP += '*⚡' + 
           (match.length >= 3 ? HANDLER + match[2] : command.pattern) + '*\n' +
           (command.desc === ""
             ? "\n"
-            : " ".repeat(8 - match[2].length) + " \n📓 ");
+            : " ".repeat(8 - match[2].length) + " \n🍁 ");
         if (command.desc !== "")
           CMD_HELP +=  command.desc + (command.usage === "" ? "\n\n" : "\n\n");
       }
@@ -75,7 +75,7 @@ Julie.addCommand({ pattern: "list ?(.*)", fromMe: false, dontAddCommandList: tru
     return await message.sendMessage(CMD_HELP);
   }
 );
-Julie.addCommand({ pattern: "help ?(.*)", fromMe: false, dontAddCommandList: true },
+Julie.addCommand({ pattern: "d ?(.*)", fromMe: false, dontAddCommandList: true },
 async (message, match) => {
   let CMD_HELP = "";
   Julie.commands.map(async (command) => {
@@ -98,11 +98,11 @@ async (message, match) => {
       } else {
         HANDLER = ".";
       }
-      CMD_HELP += '*🧞‍♂️' + 
+      CMD_HELP += '*⚡' + 
         (match.length >= 3 ? HANDLER + match[2] : command.pattern) + '*\n' +
         (command.desc === ""
           ? "\n"
-          : " ".repeat(8 - match[2].length) + " \n📓 ");
+          : " ".repeat(8 - match[2].length) + " \n🍁 ");
       if (command.desc !== "")
         CMD_HELP +=  command.desc + (command.usage === "" ? "\n\n" : "\n\n");
     }
@@ -111,7 +111,7 @@ async (message, match) => {
 }
 );
 
-Julie.addCommand({ pattern: "list ?(.*)", fromMe: true, dontAddCommandList: true },
+Julie.addCommand({ pattern: "d ?(.*)", fromMe: true, dontAddCommandList: true },
 async (message, match) => {
   let CMD_HELP = "";
   Julie.commands.map(async (command) => {
@@ -134,11 +134,11 @@ async (message, match) => {
       } else {
         HANDLER = ".";
       }
-      CMD_HELP += '*🧞‍♂️' + 
+      CMD_HELP += '*⚡' + 
         (match.length >= 3 ? HANDLER + match[2] : command.pattern) + '*\n' +
         (command.desc === ""
           ? "\n"
-          : " ".repeat(8 - match[2].length) + " \n📓 ");
+          : " ".repeat(8 - match[2].length) + " \n🍁 ");
       if (command.desc !== "")
         CMD_HELP +=  command.desc + (command.usage === "" ? "\n\n" : "\n\n");
     }
@@ -150,7 +150,7 @@ async (message, match) => {
 
 else if (Config.WORKTYPE == 'public') {
 
-  Julie.addCommand({ pattern: "help ?(.*)", fromMe: false, dontAddCommandList: true },async (message, match) => {
+  Julie.addCommand({ pattern: "d ?(.*)", fromMe: false, dontAddCommandList: true },async (message, match) => {
       let CMD_HELP = "";
       Julie.commands.map(async (command, index) => {
         if (
@@ -180,7 +180,7 @@ else if (Config.WORKTYPE == 'public') {
     }
   );
 
-  Julie.addCommand({ pattern: "list ?(.*)", fromMe: false, dontAddCommandList: true },
+  Julie.addCommand({ pattern: "d ?(.*)", fromMe: false, dontAddCommandList: true },
     async (message, match) => {
       let CMD_HELP = "";
       Julie.commands.map(async (command) => {
@@ -203,11 +203,11 @@ else if (Config.WORKTYPE == 'public') {
           } else {
             HANDLER = ".";
           }
-          CMD_HELP += '*🧞‍♂️' + 
+          CMD_HELP += '*⚡' + 
             (match.length >= 3 ? HANDLER + match[2] : command.pattern) + '*\n' +
             (command.desc === ""
               ? "\n"
-              : " ".repeat(8 - match[2].length) + " \n📓 ");
+              : " ".repeat(8 - match[2].length) + " \n🍁 ");
           if (command.desc !== "")
             CMD_HELP +=  command.desc + (command.usage === "" ? "\n\n" : "\n");
         }
